@@ -11,6 +11,62 @@ const numberCheckbox = document.getElementById("numberCheckbox"); // we want thi
 const charCheckbox = document.getElementById("charCheckbox"); // same as above ...
 
 
+
+//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+let rangeValue = range.value;
+
+rangeLabel.innerHTML = `Length :${rangeValue}`
+
+//call the createPassword() on changing the range values
+range.addEventListener("input",(e)=>{
+    rangeValue = e.target.value //latest value injected into rangeValue 
+    rangeLabel.innerHTML = `Length :${e.target.value}`
+    createPassword()
+})
+
+//call the createPassword() on changing of numberCheckbox
+numberCheckbox.addEventListener('change',(e)=>{
+    createPassword()
+});
+
+//call the createPassword() on changing of charCheckbox
+charCheckbox.addEventListener('change',(e)=>{
+    createPassword()
+});
+
+//calling the copyToClipboard 
+copyButton.addEventListener('click',()=>{
+    copyToClipboard()
+})
+
+
+
 function createPassword(){
-    //the logic goes here
+    
+    let pass = "";
+    let str = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    if (numberCheckbox.checked) {
+        str += "1234567890" 
+    }
+
+    if (charCheckbox.checked) {
+        str += "!@#$%^&*()-_=+\|[]{};:/?."
+    }
+
+    for (let i = 0; i < rangeValue; i++) {
+      let char = Math.floor(Math.random() * str.length + 1)
+      pass += str.charAt(char)
+    }
+    
+    passwordSlot.setAttribute('value',pass);
+    return pass;
 }
+
+
+function copyToClipboard(){
+    let copyValue = passwordSlot;
+    copyValue.select();
+    copyValue.setSelectionRange(0, 99999);
+    window.navigator.clipboard.writeText(copyValue.value);
+};

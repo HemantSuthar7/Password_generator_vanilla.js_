@@ -22,7 +22,7 @@
 
 #passwordWithButton{
     display: flex;
-    padding: 10px 400px 10px 350px;
+    padding: 10px 400px 10px 180px;
 }
 
 #copyButton{
