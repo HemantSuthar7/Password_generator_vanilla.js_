@@ -65,8 +65,7 @@ function createPassword(){
 
 
 function copyToClipboard(){
-    let copyValue = passwordSlot;
-    copyValue.select();
-    copyValue.setSelectionRange(0, 99999);
-    window.navigator.clipboard.writeText(copyValue.value);
+    passwordSlot.select();
+    passwordSlot.setSelectionRange(0, 99999);
+    window.navigator.clipboard.writeText(passwordSlot.value);
 };

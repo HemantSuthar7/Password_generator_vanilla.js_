@@ -48,3 +48,23 @@
 #charLabel{
     font-size: 22px;
 }
+
+
+
+
+#Navbar-Text{
+    font-size: 28px;
+    padding: 10px 0px 10px 10px;
+    color: #ffffff;
+}
+
+.Navbar{
+    margin-bottom: 10px;
+}
+
+#Navbar-cite{
+    font-size: 18px;
+    padding: 10px 10px 10px 10px;
+    color: #bcbcbc;
+    margin-left: 930px;
+}
