@@ -1,68 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password Generator</title>
     <script src="jelly.js" defer></script>
     <link rel="stylesheet" href="styles.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <nav>
-        <div class="Navbar">
-            <span id="Navbar-Text">Password Generator</span><span id="Navbar-cite">Made By Hemant</span>
+    <nav class="navbar border-0 border-light border-bottom bg-light-subtle">
+        <div class="container">
+          <a class="navbar-brand fw-bold" href="#">
+            Password Generator 
+          </a>
+          <span>made by Hemant</span>
         </div>
-        
-    </nav>
-    <hr>
+      </nav>
 
-    <br/>
-    <br/>
-    <br/>
-    <br/>
+      <div class="mx-3 p-2"></div>
 
-    <div class="parent">
-        <div class="main">
-
-            <div id="passwordWithButton">
-                <input type="text" id="passwordSlot" readonly/>
-                <input type="button" value="Copy" id="copyButton">
-                <br/>
+      <div class="container-sm">
+        <div class="card mx-2 my-4 ">
+            <div class="card-body">
+              <h4>Passwords</h4>
+              <p class="card-text">
+                Passwords are essential in today's lives Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint voluptatibus repudiandae eveniet assumenda fuga explicabo, sit neque suscipit nesciunt? Rerum tempore ducimus expedita quidem, a ea explicabo dignissimos nemo vitae?
+              </p>
             </div>
-            
-            <br/>
-            
+          </div>
+      </div>
 
-            <div id="ranger">
-                <label for="range" id="rangeLabel">Length :__</label>
-                <input type="range" id="range" min="8" max="32" name="range" />
-                <br/>
+      <div class="container">
+        <div class="input-group mb-3 mt-3">
+            <input type="text" class="form-control ms-2 text-wrap" placeholder="The password will go here" aria-label="Recipient's username" aria-describedby="button-addon2" disabled readonly>
+            <button class="btn btn-outline-primary me-2" type="button" id="button-addon2">Copy</button>
+          </div>
+          <div class="mx-auto p-4">
+            <input type="range" class="form-range" min="8" max="32" />
+            <p class="fw-normal text-center">Length = 8</p>
+          </div>
+
+
+    <div class="container-sm text-center">
+        <div class="row justify-content-center">
+             <div class="col-4">
+                <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                     <label class="form-check-label " for="flexCheckDefault">
+                     Numbers
+                    </label>
+                </div>
             </div>
-            
-            <br/>
-            
-
-            <div id="NumberBox">
-                <input type="checkbox" name="numberCheckbox" id="numberCheckbox">
-                <label for="numberCheckbox" id="numberLabel">Numbers</label>
-                <br/>
-            </div>
-        
-
-            <br/>
-            
-
-            <div id="charBox">
-                <input type="checkbox" name="charCheckbox" id="charCheckbox">
-                <label for="charCheckbox" id="charLabel">Characters</label>
-                <br/>
-            </div>
-            
-        </div>
+         </div>
     </div>
 
-    
-    
+    <div class="mx-3 p-2"></div>
+
+    <div class="container-sm text-center">
+        <div class="row justify-content-center">
+             <div class="col-4">
+                <div class="form-check">
+                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                     <label class="form-check-label " for="flexCheckDefault">
+                     Characters
+                    </label>
+                </div>
+            </div>
+         </div>
+    </div>
+
+    <div class="mx-3 p-2"></div>
+    <div class="mx-3 p-2"></div>
+
+    <footer class="footer-07 mt-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12 text-center">
+                    <h2 class="footer-heading">Project - 1</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="copyright">
+                        Copyright &copy; All rights reserved | Hemant Suthar
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+      
+
 </body>
 </html>
