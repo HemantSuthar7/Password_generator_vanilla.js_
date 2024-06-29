@@ -1,1 +1,25 @@
 /* Hence, we are using bootstrap css, we don't need to write our own css */
+
+.icon-link>.bi {
+    fill: white !important;
+}
+
+.jersey-10-regular {
+    font-family: "Jersey 10", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    margin-bottom: 1px;
+    font-size: 26px;
+  }
+
+
+.caveat-font {
+  font-family: "Caveat", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  font-size: 22px;
+  margin-bottom: 1px;
+}
